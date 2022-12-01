@@ -19,7 +19,7 @@ public class MyWorld extends World
         Apple A = new Apple();
         Elephant E = new Elephant();
         addObject(E, 300, 200);// Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        
+        addObject(A, 500, 0);
     }
     public void act(){
         
