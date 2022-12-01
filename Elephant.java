@@ -29,5 +29,10 @@ public class Elephant extends Actor
     public void act()
     {
         move();
+        if(isTouching(Apple.class)){
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnApple();
+        }
     }
 }
