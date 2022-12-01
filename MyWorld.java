@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    public static int score = 0; 
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -23,6 +23,7 @@ public class MyWorld extends World
         addObject(E, 300, 300);
         spawnApple();
     }
+    
     public void spawnApple(){
         Apple A1 = new Apple();
         int y = 0;
@@ -30,6 +31,6 @@ public class MyWorld extends World
         addObject(A1, x, y);
     }
     public void act(){
-         
+        showText("score: " + score, 50, 20);
     }
 }

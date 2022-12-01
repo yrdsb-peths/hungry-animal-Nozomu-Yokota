@@ -32,6 +32,7 @@ public class Elephant extends Actor
         if(isTouching(Apple.class)){
             removeTouching(Apple.class);
             MyWorld world = (MyWorld) getWorld();
+            MyWorld.score++;
             world.spawnApple();
         }
     }
