@@ -23,7 +23,10 @@ public class MyWorld extends World
         addObject(E, 300, 300);
         spawnApple();
     }
-    
+    public void gameOver(){
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, getWidth()/2, getHeight()/2);
+    }
     public void spawnApple(){
         Apple A1 = new Apple();
         int y = 0;
