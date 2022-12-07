@@ -15,7 +15,7 @@ public class MyWorld extends World
      */
     public MyWorld()
     {   
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         Background back = new Background();
         addObject(back, 300, 200);
         Apple A = new Apple();
@@ -25,7 +25,7 @@ public class MyWorld extends World
     }
     public void gameOver(){
         Label gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel, getWidth()/2, getHeight()/2);
+        addObject(gameOverLabel, 300, 200);
     }
     public void spawnApple(){
         Apple A1 = new Apple();
