@@ -13,7 +13,7 @@ public class Elephant extends Actor
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
     String facing = "right";
-    
+    SimpleTimer animationTimer = new SimpleTimer();
     /**
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -29,10 +29,16 @@ public class Elephant extends Actor
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(75, 75);
         }
+        animationTimer.mark();
+        
         setImage(idleRight[0]);
     }
     int imageIndex = 0;
     public void animateElephant(){
+        if(animationTimer.millisElapsed() < 150){
+             return;
+        }
+        animationTimer.mark();
         if(facing.equals("right")){
             setImage(idleRight[imageIndex]);
             imageIndex = (imageIndex + 1) % idleRight .length;
