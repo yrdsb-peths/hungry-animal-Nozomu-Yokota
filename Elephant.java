@@ -53,7 +53,7 @@ public class Elephant extends Actor
         int x = getX();
         int y = getY();
         if(Greenfoot.isKeyDown("A")){
-            x -= 4;
+            x-= 4;
             facing = "left";
         }
         if(Greenfoot.isKeyDown("D")){
