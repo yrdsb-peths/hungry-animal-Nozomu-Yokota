@@ -13,10 +13,12 @@ public class Apple extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int gravity = 2;
+    
+    int speed = 1;
     public void act()
     {
         int x = getX();
-        int y = getY();
+        int y = getY() + speed;
         setLocation(x, y + gravity);
         int bottom = getWorld().getHeight();
         
@@ -26,5 +28,10 @@ public class Apple extends Actor
             world.removeObject(this);   
         }
         // Add your action code here.
+    }
+    
+    public void setSpeed(int spd)
+    {
+        
     }
 }
