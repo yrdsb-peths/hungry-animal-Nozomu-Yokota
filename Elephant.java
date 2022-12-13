@@ -53,12 +53,18 @@ public class Elephant extends Actor
         int x = getX();
         int y = getY();
         if(Greenfoot.isKeyDown("A")){
-            x-= 4;
+            x-= 5;
             facing = "left";
         }
         if(Greenfoot.isKeyDown("D")){
-            x+= 4;
+            x+= 5;
             facing = "right";
+        }
+        if(Greenfoot.isKeyDown("S")){
+            y+= 1;
+        }
+        if(Greenfoot.isKeyDown("W")){
+            y-= 1;
         }
         setLocation(x, y);
         

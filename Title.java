@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Title extends World
 {
-Label titleLabel = new Label("Hungry Elephant", 75);
+    Label titleLabel = new Label("Hungry Elephant", 75);
     /**
      * Constructor for objects of class Title.
      * 
@@ -17,10 +17,11 @@ Label titleLabel = new Label("Hungry Elephant", 75);
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        
+
         addObject(titleLabel, getWidth()/2, getHeight()/2);
+        prepare();
     }
-    
+
     public void act()
     {
         if(Greenfoot.isKeyDown("space"))
@@ -28,5 +29,14 @@ Label titleLabel = new Label("Hungry Elephant", 75);
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
+    }
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        
     }
 }
