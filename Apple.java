@@ -12,7 +12,7 @@ public class Apple extends Actor
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int gravity = 2;
+    int gravity = 0;
     
     int speed = 1;
     public void act()
@@ -32,6 +32,6 @@ public class Apple extends Actor
     
     public void setSpeed(int spd)
     {
-        
+        speed = spd;
     }
 }
