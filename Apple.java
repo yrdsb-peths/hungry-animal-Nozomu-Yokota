@@ -30,6 +30,9 @@ public class Apple extends Actor
         // Add your action code here.
     }
     
+    /**
+     * Change speed that the apples will fall.
+     */
     public void setSpeed(int spd)
     {
         speed = spd;
